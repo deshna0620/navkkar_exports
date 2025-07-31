@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
     background-size: 400% 400%;
     animation: gradientMove 15s ease infinite;
@@ -37,15 +37,18 @@ body {
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 10px rgba(255,255,255,0.5);
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .center-box a {
-    color: #ffeb3b;
-    font-weight: bold;
+    color: #ffffff;
+    font-weight: 600;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .center-box a:hover {
+    color: #00e6e6;
     text-decoration: underline;
 }
 
@@ -55,6 +58,8 @@ body {
     overflow-x: auto;
     gap: 20px;
     padding: 20px;
+    white-space: nowrap;
+    scrollbar-width: thin;
 }
 
 .image-gallery img {
@@ -62,6 +67,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.6);
     transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
 .image-gallery img:hover {

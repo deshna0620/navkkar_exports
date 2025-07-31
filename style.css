@@ -20,7 +20,7 @@ body {
 .container {
     text-align: center;
     max-width: 1000px;
-    margin-top: 50px;
+    margin: 50px 10px;
 }
 
 .center-box {
@@ -55,21 +55,29 @@ body {
 .image-gallery {
     margin-top: 40px;
     display: flex;
-    overflow-x: auto;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
     padding: 20px;
-    white-space: nowrap;
-    scrollbar-width: thin;
 }
 
 .image-gallery img {
-    height: 250px;
+    height: 200px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.6);
     transition: transform 0.3s ease;
-    flex-shrink: 0;
 }
 
 .image-gallery img:hover {
     transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .image-gallery img {
+        height: 150px;
+    }
+
+    .center-box h1 {
+        font-size: 2em;
+    }
 }
